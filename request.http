@@ -1,0 +1,32 @@
+###
+POST http://localhost:3000/api/usuarios HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "francis",
+    "correo": "francis@gmail.com",
+    "contraseña": "123123123",
+    "fecha": "2023-09-12",
+    "rol": "owo"
+}
+
+###
+GET http://localhost:3000/api/usuarios HTTP/1.1
+
+###
+GET http://localhost:3000/api/usuarios/650003f622705f07ad27c05f HTTP/1.1
+
+###
+PUT http://localhost:3000/api/usuarios/65000613d5bb5925227585ed HTTP/1.1
+Content-Type: application/json
+
+{
+    "nombre": "david",
+    "correo": "david@gmail.com",
+    "contraseña": "tussi930",
+    "fecha": "2023-09-12",
+    "rol": "cachorro"
+}
+
+###
+DELETE http://localhost:3000/api/usuarios/6500093f524c089deadd3b5c HTTP/1.1
