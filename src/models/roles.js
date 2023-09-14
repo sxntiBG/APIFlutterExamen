@@ -1,30 +1,31 @@
 const mongoose = require('mongoose');
 
-const usuarioSchema = mongoose.Schema({
+const rolesSchema = mongoose.Schema({
     id: {
-        type: String,
+        type : String,
         required:[true,'El campo id es obligatorio']
+
     },
     nombre : {
         type: String,
         required:[true,'El campo Nombre es obligatorio']
     },
-    correo : {
-        type: String,
+    productos : {
+        type: Boolean,
         required:[true,'El campo Correo es obligatorio']
     },
-    contraseña : {
-        type: String,
+    ventas : {
+        type: Boolean,
         required:[true,'El campo Contraseña es obligatorio']
     },
-    fecha : {
-        type: Date,
+    compras : {
+        type: Boolean,
         required:[true, 'El campo Fecha de creación es obligatorio']
     },
-    rol : {
-        type: String,
+    proveedores : {
+        type: Boolean,
         required:[true, 'El campo Rol es obligatorio']
     }
 });
 
-module.exports = mongoose.model('usuario', usuarioSchema);
+module.exports = mongoose.model('roles', rolesSchema);

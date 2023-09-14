@@ -1,8 +1,11 @@
+USUARIOS
+
 ###
 POST http://localhost:3000/api/usuarios HTTP/1.1
 Content-Type: application/json
 
 {
+    "id": "1",
     "nombre": "francis",
     "correo": "francis@gmail.com",
     "contraseña": "123123123",
@@ -30,3 +33,42 @@ Content-Type: application/json
 
 ###
 DELETE http://localhost:3000/api/usuarios/6500093f524c089deadd3b5c HTTP/1.1
+
+###
+------------------------------------------------------------
+ROLES
+
+###
+POST http://localhost:3000/api/roles HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "4",
+    "nombre": "Empleado 2",
+    "productos": true,
+    "ventas": false,
+    "compras": false,
+    "proveedores": false
+}
+
+###
+GET http://localhost:3000/api/roles HTTP/1.1
+
+###
+GET http://localhost:3000/api/roles/650237123eda61c051382ff3 HTTP/1.1
+
+###
+PUT http://localhost:3000/api/roles/650237313eda61c051382ff7 HTTP/1.1
+Content-Type: application/json
+
+{
+    "id": "4",
+    "nombre": "Empleado 2",
+    "productos": true,
+    "ventas": false,
+    "compras": false,
+    "proveedores": true
+}
+
+###
+DELETE http://localhost:3000/api/roles/650237313eda61c051382ff7 HTTP/1.1
