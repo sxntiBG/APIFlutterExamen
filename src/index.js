@@ -20,6 +20,13 @@ app.use((req, res, next) => {
     next();
 });
 
+app.use((req, res, next) => {
+    res.header('Access-Control-Allow-Origin', 'http://localhost:51487/');
+    res.header('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE');
+    res.header('Access-Control-Allow-Headers', 'Content-Type, Authorization');
+    next();
+});
+
 //Puerto
 const port = process.env.PORT || 3000;
 
