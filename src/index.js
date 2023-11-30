@@ -1,8 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 require('dotenv').config();
-const userRoutes = require('./routes/usuarios');
-const rolRoutes = require('./routes/roles');
+const viajesRoutes = require('./routes/viajes');
 
 const app = express();
 
@@ -27,8 +26,8 @@ const port = process.env.PORT || 3000;
 
 //Middleware
 app.use(express.json());
-app.use('/api', userRoutes);
-app.use('/api', rolRoutes);
+app.use('/api', viajesRoutes);
+
 
 //Rutas
 app.get('/', (req, res) =>{
